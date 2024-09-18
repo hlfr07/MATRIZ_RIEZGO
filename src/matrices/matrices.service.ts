@@ -111,7 +111,10 @@ export class MatricesService {
     matrizEncontrada.a_naranja = parseInt(updateMatrixDto.a_naranja);
     matrizEncontrada.de_rojo = parseInt(updateMatrixDto.de_rojo);
     matrizEncontrada.a_rojo = parseInt(updateMatrixDto.a_rojo);
+    matrizEncontrada.de_verde = parseInt(updateMatrixDto.de_verde); // Campo añadido
+    matrizEncontrada.a_verde = parseInt(updateMatrixDto.a_verde);   // Campo añadido
     matrizEncontrada.id_usuario = usuarioEncontrado.id;
+
 
     await this.matrizRepository.update(id, matrizEncontrada);
 
