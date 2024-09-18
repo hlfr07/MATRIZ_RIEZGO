@@ -3,13 +3,6 @@ import { Transform } from "class-transformer";
 import { IsNotEmpty, IsString, Max, MaxLength, Min, MinLength } from "class-validator";
 
 export class CreateMatrixDto {
-    @ApiProperty()
-    @Transform(({ value }) => typeof value === 'string' ? value.trim() : value)
-    @IsNotEmpty({ message: 'El nombre de la matriz no puede estar vacío' })
-    @IsString({ message: 'El nombre de la matriz debe ser un texto' })
-    @MaxLength(200, { message: 'El nombre de la matriz debe tener menos de 200 caracteres' })
-    @MinLength(3, { message: 'El nombre de la matriz debe tener más de 3 caracteres' })
-    nombre_matriz: string;
 
     @ApiProperty()
     @Transform(({ value }) => typeof value === 'string' ? value.trim() : value)

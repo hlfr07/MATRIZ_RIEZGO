@@ -6,9 +6,6 @@ export class Matrix {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ unique: true, nullable: false })
-    nombre_matriz: string;
-
     @Column({ default: true })
     estado: boolean;
 

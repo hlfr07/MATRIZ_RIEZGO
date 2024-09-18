@@ -4,8 +4,6 @@ export class GetMatrixDto {
     @ApiProperty()
     id: number;
     @ApiProperty()
-    nombre_matriz: string;
-    @ApiProperty()
     estado: boolean;
     @ApiProperty()
     minima: number;

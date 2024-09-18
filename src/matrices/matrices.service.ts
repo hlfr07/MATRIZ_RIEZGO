@@ -12,13 +12,6 @@ export class MatricesService {
   constructor(@InjectRepository(Matrix) private matrizRepository: Repository<Matrix>, @InjectRepository(Usuario) private usuarioRepository: Repository<Usuario>) { }
 
   async create(createMatrixDto: CreateMatrixDto) {
-    const matrizEncontrada = await this.matrizRepository.findOneBy({
-      nombre_matriz: createMatrixDto.nombre_matriz
-    });
-
-    if (matrizEncontrada) {
-      throw new HttpException('La matriz ya existe', HttpStatus.CONFLICT);
-    }
 
     const usuarioEncontrado = await this.usuarioRepository.findOneBy({
       id: parseInt(createMatrixDto.id_usuario),
@@ -34,7 +27,6 @@ export class MatricesService {
     }
 
     const NuevaMatriz = this.matrizRepository.create({
-      nombre_matriz: createMatrixDto.nombre_matriz,
       minima: parseInt(createMatrixDto.minima),
       menor: parseInt(createMatrixDto.menor),
       moderada: parseInt(createMatrixDto.moderada),
@@ -55,8 +47,8 @@ export class MatricesService {
     });
 
     await this.matrizRepository.save(NuevaMatriz);
-
-    return { message: 'Matriz creada correctamente' };
+    //retornamos la nueva matriz con el id asignado
+    return NuevaMatriz;
   }
 
   findAll() {
@@ -93,17 +85,6 @@ export class MatricesService {
       throw new HttpException('Matriz no encontrada', HttpStatus.NOT_FOUND);
     }
 
-    //comprobar la existencia de la matriz con el mismo nombre solo si el nombre es diferente
-    if (updateMatrixDto.nombre_matriz !== matrizEncontrada.nombre_matriz) {
-      const matrizEncontrada = await this.matrizRepository.findOneBy({
-        nombre_matriz: updateMatrixDto.nombre_matriz
-      });
-
-      if (matrizEncontrada) {
-        throw new HttpException('La matriz ya existe', HttpStatus.CONFLICT);
-      }
-    }
-
     const usuarioEncontrado = await this.usuarioRepository.findOneBy({
       id: parseInt(updateMatrixDto.id_usuario)
     });
@@ -112,7 +93,6 @@ export class MatricesService {
       throw new HttpException('El usuario no existe', HttpStatus.NOT_FOUND);
     }
 
-    matrizEncontrada.nombre_matriz = updateMatrixDto.nombre_matriz;
     matrizEncontrada.minima = parseInt(updateMatrixDto.minima);
     matrizEncontrada.menor = parseInt(updateMatrixDto.menor);
     matrizEncontrada.moderada = parseInt(updateMatrixDto.moderada);
