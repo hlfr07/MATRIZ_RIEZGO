@@ -23,9 +23,12 @@ export class AuthService {
       throw new UnauthorizedException('Contraseña incorrecta');
     }
 
+    //buscamos el nombre de perfil segun el id
+
     const payload = {
       sub: usuario.id,
-      usuario: usuario,
+      //usuario: usuario,
+      rol: usuario.id_perfil,
     };
 
     const accessToken = await this.jwtService.signAsync(payload, {
