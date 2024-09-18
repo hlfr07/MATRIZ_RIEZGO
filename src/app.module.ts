@@ -9,6 +9,8 @@ import { MailService } from './mail/mail.service';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { MailModule } from './mail/mail.module';
 import { AuthModule } from './auth/auth.module';
+import { MatricesModule } from './matrices/matrices.module';
+import { EventosModule } from './eventos/eventos.module';
 
 @Module({
   imports: [
@@ -32,6 +34,8 @@ import { AuthModule } from './auth/auth.module';
     UsuariosModule,
     MailModule,
     AuthModule,
+    MatricesModule,
+    EventosModule,
   ],
   controllers: [AppController],
   providers: [AppService, MailService],
