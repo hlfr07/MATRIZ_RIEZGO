@@ -30,7 +30,6 @@ export class CreateEventoDto {
     @IsString({ message: 'El valor debe ser un texto' })
     @MaxLength(100, { message: 'El valor debe tener menos de 100 caracteres' })
     @MinLength(1, { message: 'El valor debe tener más de 1 caracteres' })
-    @Min(0, { message: 'El valor debe ser mayor o igual a 0' })
     valor: string;
     @ApiProperty()
     @Transform(({ value }) => typeof value === 'string' ? value.trim() : value)

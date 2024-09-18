@@ -10,7 +10,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor minima de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor minima de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor minima de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor minima de la matriz debe ser mayor a 0' })
     minima: string;
 
     @ApiProperty()
@@ -19,7 +18,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor menor de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor menor de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor menor de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor menor de la matriz debe ser mayor a 0' })
     menor: string;
 
     @ApiProperty()
@@ -28,7 +26,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor moderada de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor moderada de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor moderada de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor moderada de la matriz debe ser mayor a 0' })
     moderada: string;
 
     @ApiProperty()
@@ -37,7 +34,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor mayor de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor mayor de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor mayor de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor mayor de la matriz debe ser mayor a 0' })
     mayor: string;
 
     @ApiProperty()
@@ -46,7 +42,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor maxima de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor maxima de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor maxima de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor maxima de la matriz debe ser mayor a 0' })
     maxima: string;
 
     @ApiProperty()
@@ -55,7 +50,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor muy_alta de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor muy_alta de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor muy_alta de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor muy_alta de la matriz debe ser mayor a 0' })
     muy_alta: string;
 
     @ApiProperty()
@@ -64,7 +58,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor alta de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor alta de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor alta de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor alta de la matriz debe ser mayor a 0' })
     alta: string;
 
     @ApiProperty()
@@ -73,7 +66,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor media de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor media de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor media de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor media de la matriz debe ser mayor a 0' })
     media: string;
 
     @ApiProperty()
@@ -82,7 +74,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor baja de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor baja de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor baja de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor baja de la matriz debe ser mayor a 0' })
     baja: string;
 
     @ApiProperty()
@@ -91,7 +82,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor muy_baja de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor muy_baja de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor muy_baja de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor muy_baja de la matriz debe ser mayor a 0' })
     muy_baja: string;
 
     @ApiProperty()
@@ -100,7 +90,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor de_amarillo de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor de_amarillo de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor de_amarillo de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor de_amarillo de la matriz debe ser mayor a 0' })
     de_amarillo: string;
 
     @ApiProperty()
@@ -109,7 +98,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor a_amarillo de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor a_amarillo de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor a_amarillo de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor a_amarillo de la matriz debe ser mayor a 0' })
     a_amarillo: string;
 
     @ApiProperty()
@@ -118,7 +106,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor de_naranja de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor de_naranja de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor de_naranja de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor de_naranja de la matriz debe ser mayor a 0' })
     de_naranja: string;
 
     @ApiProperty()
@@ -127,7 +114,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor a_naranja de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor a_naranja de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor a_naranja de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor a_naranja de la matriz debe ser mayor a 0' })
     a_naranja: string;
 
     @ApiProperty()
@@ -136,7 +122,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor de_rojo de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor de_rojo de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor de_rojo de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor de_rojo de la matriz debe ser mayor a 0' })
     de_rojo: string;
 
     @ApiProperty()
@@ -145,7 +130,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor a_rojo de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor a_rojo de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor a_rojo de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor a_rojo de la matriz debe ser mayor a 0' })
     a_rojo: string;
 
     @ApiProperty()
@@ -154,7 +138,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor de_verde de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor de_verde de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor de_verde de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor de_verde de la matriz debe ser mayor a 0' })
     de_verde: string;
 
     @ApiProperty()
@@ -163,7 +146,6 @@ export class CreateMatrixDto {
     @IsString({ message: 'El valor a_verde de la matriz debe ser un texto' })
     @MinLength(1, { message: 'El valor a_verde de la matriz debe tener más de 1 caracteres' })
     @MaxLength(10, { message: 'El valor a_verde de la matriz debe tener menos de 10 caracteres' })
-    @Min(0, { message: 'El valor a_verde de la matriz debe ser mayor a 0' })
     a_verde: string;
 
     @ApiProperty()
