@@ -43,7 +43,9 @@ export class MatricesService {
       a_naranja: parseInt(createMatrixDto.a_naranja),
       de_rojo: parseInt(createMatrixDto.de_rojo),
       a_rojo: parseInt(createMatrixDto.a_rojo),
-      id_usuario: usuarioEncontrado.id
+      de_verde: parseInt(createMatrixDto.de_verde), // Asegúrate de que este campo también está en createMatrixDto
+      a_verde: parseInt(createMatrixDto.a_verde),   // Asegúrate de que este campo también está en createMatrixDto
+      id_usuario: usuarioEncontrado.id // Asegúrate de que usuarioEncontrado está definido
     });
 
     await this.matrizRepository.save(NuevaMatriz);
@@ -60,7 +62,7 @@ export class MatricesService {
   }
 
   async findOne(id: number) {
-    const matrizEncontrada =await this.matrizRepository.findOneBy({
+    const matrizEncontrada = await this.matrizRepository.findOneBy({
       id: id,
       estado: true
     });
@@ -130,7 +132,7 @@ export class MatricesService {
       throw new HttpException('Matriz eliminada', HttpStatus.NOT_FOUND);
     }
 
-    await this.matrizRepository.update(id, {estado: false});
+    await this.matrizRepository.update(id, { estado: false });
 
     return { message: 'Matriz eliminada correctamente' };
   }
