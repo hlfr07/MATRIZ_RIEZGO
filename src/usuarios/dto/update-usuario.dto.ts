@@ -46,7 +46,7 @@ export class UpdateUsuarioDto {
     usuario: string;
 
     @ApiProperty()
-    @Transform(({ value }) => typeof value === 'boolean' ? value : value === 'true')
+    @Transform(({ value }) => typeof value === 'string' ? value.trim() : value)
     @IsNotEmpty({ message: 'El perfil no puede estar vacío' })
     @IsString({ message: 'El perfil debe ser un texto' })
     @MaxLength(100, { message: 'El perfil debe tener menos de 100 caracteres' })
