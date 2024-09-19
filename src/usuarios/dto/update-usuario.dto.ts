@@ -49,7 +49,7 @@ export class UpdateUsuarioDto {
     @Transform(({ value }) => typeof value === 'boolean' ? value : value === 'true')
     @IsNotEmpty({ message: 'El perfil no puede estar vacío' })
     @IsString({ message: 'El perfil debe ser un texto' })
-    @MaxLength(50, { message: 'El perfil debe tener menos de 50 caracteres' })
-    @MinLength(3, { message: 'El perfil debe tener más de 3 caracteres' })
+    @MaxLength(100, { message: 'El perfil debe tener menos de 100 caracteres' })
+    @MinLength(1, { message: 'El perfil debe tener más de 1 caracteres' })
     id_perfil: string;
 }
